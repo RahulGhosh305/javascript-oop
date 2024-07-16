@@ -10,11 +10,11 @@
 - Class properties are initiate by Class contructor.
 - Class have custom function that call method.
 
-## Four piller of Classes
+## Four pillars of Classes
 
 - Inheritance
--
--
--
+- Encapsulation
+- Abstruction
+- Polymorphism
 
 ## Inheritance
