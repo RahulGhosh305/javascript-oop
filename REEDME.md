@@ -1,6 +1,6 @@
 # Javascript OOP Concept
 
-- run code by using command : node script.js
+- run code by using command : node file_name
 
 ## Class :
 
@@ -12,9 +12,17 @@
 
 ## Four pillars of Classes
 
-- Inheritance
 - Encapsulation
+- Inheritance
 - Abstruction
 - Polymorphism
 
+## Encapsulation
+
+- Properties and Methods are organized into the class.
+- Easy to read and maintain.
+- properies and methods are can be controlable using private, protected, public.
+
 ## Inheritance
+
+-
