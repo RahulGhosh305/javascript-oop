@@ -1,4 +1,6 @@
 // Class is a BluePrint/Structure of actual Object.
+
+// Create Class
 class Product {
   // constructor is a build-in function that call autometically when a class create new instance.
   constructor(name, weight, model) {
@@ -16,6 +18,7 @@ let secondProduct = new Product("Redmi", "165gm", 23500);
 // console.log("Second Product Price :", secondProduct.price); // 23500
 
 // Inheritance And Encapsulation
+// Inherite Product Class
 class Mobile extends Product {
   // private properties
   #month;
@@ -53,4 +56,4 @@ class Mobile extends Product {
 const phone = new Mobile("Samsung", "125gm", 2024, 22500, 10000, 5.5);
 
 // console.log("Phone name: " + phone.name + ", " + "model is: " + phone.model);
-console.log("Monthly EMI is :", phone.calculate_EMI());
+// console.log("Monthly EMI is :", phone.calculate_EMI());
