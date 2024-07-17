@@ -51,6 +51,21 @@ class Mobile extends Product {
       (this.#loanAmount * r * Math.pow(1 + r, m)) / (Math.pow(1 + r, m) - 1)
     );
   }
+
+  // Getter mathod
+  getLoanAmount() {
+    return this.#loanAmount
+  }
+
+  // Getter mathod
+  setLoanAmount(amount) {
+    return this.#loanAmount = amount
+  }
+
+  // Use this method for Polymorphism in future
+  getLoanMessage() {
+    return `Your rest of loan amount is ${this.#loanAmount} tk.`
+  }
 }
 
 // Create new Instance samsung
@@ -93,3 +108,21 @@ store.addProduct(samsung)
 store.addProduct(redmi)
 
 console.log(store.listProductsWithEMI())
+
+
+// Polymorphism
+class Message extends Mobile {
+  constructor(name, weight, model, payment, downPayment, interestRate) {
+    super(name, weight, model, payment, downPayment, interestRate)
+  }
+
+  // Polymorphism method that is override the actual Moble class method getLoanMessage()
+  getLoanMessage() {
+    console.log(`আপনার বাকি ঋণের পরিমাণ হল ${this.getLoanAmount()} টাকা।`)
+  }
+}
+
+const loanMessage = new Message("Apple", "125gm", 2024, 2500, 100, 2)
+
+// console.log(loanMessage.getLoanMessage())
+// console.log(phone.getLoanMessage());

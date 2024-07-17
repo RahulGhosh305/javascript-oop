@@ -31,3 +31,8 @@
 ## Abstraction
 
 - Hiding real block of code implimentation and show only uses modules.
+
+## Polymorphism
+
+- Simillar class method are can be changeable is there need.
+- Simple Class multiple in shape.
