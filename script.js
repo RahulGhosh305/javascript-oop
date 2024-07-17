@@ -37,11 +37,12 @@ class Mobile extends Product {
     this.#loanAmount = this.payment - this.downPayment;
   }
 
-  // private Method
+  // Private Method
   #calculate_Monthly_Interest_Rate() {
     return this.interestRate / 100 / this.#month;
   }
 
+  // Public Method
   calculate_EMI() {
     const r = this.#calculate_Monthly_Interest_Rate();
     const m = this.#month;
@@ -54,6 +55,41 @@ class Mobile extends Product {
 
 // Create new Instance samsung
 const phone = new Mobile("Samsung", "125gm", 2024, 22500, 10000, 5.5);
-
 // console.log("Phone name: " + phone.name + ", " + "model is: " + phone.model);
 // console.log("Monthly EMI is :", phone.calculate_EMI());
+
+// Abstraction layer that interacts with the Mobile class
+class MobileStore {
+  #products
+
+  constructor() {
+    this.#products = [];
+  }
+
+  // Abstraction method to add a product
+  addProduct(product) {
+    if (!(product instanceof Product)) {
+      throw new Error("Only products can be added.");
+    } else {
+      this.#products.push(product);
+    }
+  }
+
+  // Abstraction method to list all products with their EMI
+  listProductsWithEMI() {
+    this.#products.forEach((product) => {
+      console.log(`This ${product.name} is ${product.model} and your monthly EMI is ${product.calculate_EMI()}`)
+    })
+  }
+}
+
+// Create new instances
+const samsung = new Mobile("Samsung", "175gm", 22000, 22500, 10000, 5.5);
+const redmi = new Mobile("Redmi", "165gm", 23500, 22500, 5000, 6.0);
+
+// Create instance
+let store = new MobileStore()
+store.addProduct(samsung)
+store.addProduct(redmi)
+
+console.log(store.listProductsWithEMI())

@@ -27,3 +27,7 @@
 
 - Child class inherites parent class public properties and methods.
 - Private properties and method are not accessable in outsite of its own class but set private properties value from child to parent class through super() function
+
+## Abstraction
+
+- Hiding real block of code implimentation and show only uses modules.
