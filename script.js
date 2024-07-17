@@ -57,9 +57,9 @@ class Mobile extends Product {
     return this.#loanAmount
   }
 
-  // Getter mathod
-  setLoanAmount(amount) {
-    return this.#loanAmount = amount
+  // Setter mathod
+  setMonth(month) {
+    return this.#month = month
   }
 
   // Use this method for Polymorphism in future
