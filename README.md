@@ -2,6 +2,10 @@
 
 - run code by using command : node file_name
 
+## OOP
+
+- Features is reduce duplicate code, bug free code, easy to maintain.
+
 ## Class :
 
 - Class is a blueprint/Structure of actual Object
